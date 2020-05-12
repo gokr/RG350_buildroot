@@ -4,11 +4,15 @@
 #
 ################################################################################
 
-SDL2_VERSION = master
-SDL2_SITE = $(call github,pcercuei,SDL2,$(SDL2_VERSION))
-SDL2_LICENSE = zlib
+SDL2_VERSION = 2.0.12
+SDL2_SOURCE = SDL2-$(SDL2_VERSION).tar.gz
+SDL2_SITE = http://www.libsdl.org/release
+SDL2_LICENSE = Zlib
 SDL2_LICENSE_FILES = COPYING.txt
 SDL2_INSTALL_STAGING = YES
+
+# We must enable static build to get compilation successful.
+SDL2_CONF_OPTS += --enable-static
 
 ifeq ($(BR2_PACKAGE_HAS_LIBGLES),y)
 SDL2_DEPENDENCIES += $(LIBGLES_DEPENDENCIES)

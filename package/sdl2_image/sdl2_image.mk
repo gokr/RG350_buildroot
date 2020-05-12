@@ -14,7 +14,6 @@ SDL2_IMAGE_LICENSE_FILES = COPYING.txt
 SDL2_IMAGE_CONF_OPTS = --with-sdl-prefix=$(STAGING_DIR)/usr \
 		--with-sdl-exec-prefix=$(STAGING_DIR)/usr \
 		--disable-sdltest \
-		--disable-static \
 		--enable-bmp=$(if $(BR2_PACKAGE_SDL2_IMAGE_BMP),yes,no) \
 		--enable-gif=$(if $(BR2_PACKAGE_SDL2_IMAGE_GIF),yes,no) \
 		--enable-jpg=$(if $(BR2_PACKAGE_SDL2_IMAGE_JPEG),yes,no) \
