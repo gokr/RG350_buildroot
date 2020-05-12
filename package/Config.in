@@ -224,6 +224,7 @@ endif
 	source "package/sdl2_mixer/Config.in"
 	source "package/sdl2_net/Config.in"
 	source "package/sdl2_ttf/Config.in"
+	source "package/sdl2_gfx/Config.in"
 	source "package/timidity-instruments/Config.in"
 	source "package/unlockvt/Config.in"
 
